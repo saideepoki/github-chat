@@ -15,7 +15,7 @@ export default function Page() {
                 </div>
                 <div className="flex flex-col justify-center items-center space-y-3 mt-5">
                     <Button 
-                        className="flex items-center space-x-2 w-64 bg-white text-zinc-950 sm:w-72 lg:w-80"
+                        className="flex items-center space-x-2 w-64 bg-white hover:bg-slate-200 text-zinc-950 sm:w-72 lg:w-80"
                         onClick={() => signIn('google')}>
                         <FcGoogle size={20} />
                         <span className="text-sm sm:text-base lg:text-md">Google</span>
