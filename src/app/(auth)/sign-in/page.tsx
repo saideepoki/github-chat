@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { signIn } from "next-auth/react";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Page() {
     return (
@@ -22,7 +23,7 @@ export default function Page() {
                     </Button>
                     <Button 
                         className="flex items-center space-x-2 w-64 sm:w-72 lg:w-80"
-                        onClick={() => signIn("github")}>
+                        onClick={() => signIn("github",{callbackUrl: '/'})}>
                         <FaGithub size={20} />
                         <span className="text-sm sm:text-base lg:text-md">GitHub</span>
                     </Button>

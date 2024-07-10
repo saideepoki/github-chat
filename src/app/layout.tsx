@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import SessionWrapper from "@/components/SessionWrapper";
+import Header from "@/components/Header";
 
 
 export const metadata: Metadata = {
@@ -23,7 +24,10 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="en">
-        <body className={cn("min-h-screen font-sans antialiased",fontSans.variable)}>{children}</body>
+        <body className={cn("min-h-screen bg-zinc-950 font-sans antialiased",fontSans.variable)}>
+          <Header/>
+          {children}
+        </body>
       </html>
     </SessionWrapper>
   );
